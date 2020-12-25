@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!--suppress ALL -->
+<mapper namespace="top.lemenk.springcloud.mapper.PaymentMapper">
+
+  <select id="getInfoById" resultType="top.lemenk.springcloud.po.PaymentPO">
+    select *
+    from payment
+    where id = #{id};
+  </select>
+
+  <insert id="save" parameterType="top.lemenk.springcloud.po.PaymentPO" useGeneratedKeys="true" keyProperty="id">
+    insert into payment(id, serial)
+    values (#{id,jdbcType=BIGINT}, #{serial,jdbcType=VARCHAR})
+  </insert>
+</mapper>

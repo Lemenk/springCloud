@@ -1,0 +1,23 @@
+server:
+  port: 8001
+spring:
+  application:
+    name: cloud-payment-service
+  datasource:
+    # 当前数据源操作类型
+    type: com.alibaba.druid.pool.DruidDataSource
+    # mysql驱动类
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://81.70.205.139:3306/learn?useUnicode=true&characterEncoding=UTF-8&useSSL=false&serverTimezone=GMT%2B8
+    username: root
+    password: Lemenkwdljk1@%**1
+mybatis:
+  mapper-locations: classpath*:mapper/*.xml
+
+#logging.level.top.lemenk.springcloud.mapper=debug
+logging:
+  level:
+    top:
+      lemenk:
+        springcloud:
+          mapper: debug
